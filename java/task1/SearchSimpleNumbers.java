@@ -37,6 +37,7 @@ public class SearchSimpleNumbers {
         }
 
         double percentSimpleNumbersFromAll = countOfSimpleNumbers * 100 / (boundOfNumbers + 1);
+        // считаем процент простых чисел от всех, включая ноль
 
         System.out.printf("Count of simple numbers in range from 0 to %d - %d\n\n" +
                         "Percent simple numbers from all - %.1f\n",
