@@ -1,16 +1,16 @@
 package task2;
 
-import java.awt.image.AreaAveragingScaleFilter;
 import java.util.ArrayList;
 import java.util.List;
 
 public class DemoOfCountry {
     public static void main(String[] args) {
-        City cityMinsk = new City(true, true, 1533.32);
-        City cityGomel = new City(false, true, 1223.12);
-        City cityGrodno = new City(false, true, 500.21);
-        City cityZaslavl = new City(false, false, 144.54);
-        City cityBorisov = new City(false, false, 123.65);
+        // инициализация объектов для проверки
+        City cityMinsk = new City("Minsk", true, true, 1533.32);
+        City cityGomel = new City("Gomel", false, true, 1223.12);
+        City cityGrodno = new City("Grodno", false, true, 500.21);
+        City cityZaslavl = new City("Zaslavl", false, false, 144.54);
+        City cityBorisov = new City("Borisov", false, false, 123.65);
 
         List<City> listOfCityInMinskiyDistrict = new ArrayList<>();
         listOfCityInMinskiyDistrict.add(cityMinsk);
@@ -48,5 +48,12 @@ public class DemoOfCountry {
         listOfRegionInState.add(regionGomelskiy);
         listOfRegionInState.add(regionGrodnenskiy);
         listOfRegionInState.add(regionMinskiy);
+
+        // проверка методов
+        State stateBelarus = new State(87236163.23, listOfRegionInState);
+        stateBelarus.findTheCapitalOfState();
+        stateBelarus.findCountOfRegions();
+        stateBelarus.findAreaOfCities();
+        stateBelarus.findRegionalCenter();
     }
 }
