@@ -1,6 +1,7 @@
 package task2;
 
 import java.util.List;
+import java.util.Objects;
 
 public class State {
     private double area;
@@ -54,5 +55,25 @@ public class State {
                 }
             }
         }
+    }
+
+    @Override
+    public boolean equals(Object o) {
+        if (this == o) return true;
+        if (o == null || getClass() != o.getClass()) return false;
+        State state = (State) o;
+        return Double.compare(state.area, area) == 0 && Objects.equals(listOfRegions, state.listOfRegions);
+    }
+
+    @Override
+    public int hashCode() {
+        return Objects.hash(area, listOfRegions);
+    }
+
+    @Override
+    public String toString() {
+        return "State{" +
+                "area=" + area +
+                '}';
     }
 }
