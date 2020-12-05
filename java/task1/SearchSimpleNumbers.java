@@ -4,7 +4,7 @@ import java.util.Scanner;
 
 public class SearchSimpleNumbers {
     public static void main(String[] args) {
-        System.out.println("Enter last number of all simple numbers:");
+        System.out.println("Enter last number of all numbers:");
         Scanner scanner = new Scanner(System.in);
         int boundOfNumbers = scanner.nextInt();
 
@@ -39,7 +39,7 @@ public class SearchSimpleNumbers {
         double percentSimpleNumbersFromAll = countOfSimpleNumbers * 100 / (boundOfNumbers + 1);
         // считаем процент простых чисел от всех, включая ноль
 
-        System.out.printf("Count of simple numbers in range from 0 to %d - %d\n\n" +
+        System.out.printf("Count of numbers in range from 0 to %d - %d\n\n" +
                         "Percent simple numbers from all - %.1f\n",
                 boundOfNumbers, countOfSimpleNumbers, percentSimpleNumbersFromAll);
 
